@@ -1,7 +1,8 @@
+const settings = require("../settings");
 async function aliveCommand(sock, chatId) {
     try {
         const message = `*🤖 Knight Bot is Active!*\n\n` +
-                       `*Version:* 1.0.0\n` +
+                       `*Version:* ${settings.version}\n` +
                        `*Status:* Online\n` +
                        `*Mode:* Public\n\n` +
                        `*🌟 Features:*\n` +

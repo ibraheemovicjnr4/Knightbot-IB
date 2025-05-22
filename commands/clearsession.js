@@ -59,6 +59,10 @@ async function clearSessionCommand(sock, chatId, msg) {
 
         // Delete files
         for (const file of files) {
+            if (file === 'creds.json') {
+                // Skip creds.json file
+                continue;
+            }
             try {
                 const filePath = path.join(sessionDir, file);
                 fs.unlinkSync(filePath);
